@@ -1367,6 +1367,10 @@ body {
   }
 }
 
+.item-footer.active .item-footer__list {
+  display: block;
+}
+
 .item-footer__title {
   font-weight: 700;
   font-size: 15px;
@@ -1374,6 +1378,26 @@ body {
   letter-spacing: 0.2px;
   color: #FFFFFF;
   margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.item-footer__title:after {
+  content: "⮟";
+  color: #fff;
+  margin-left: 10px;
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .item-footer__title:after {
+    display: inline;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .item-footer__list {
+    display: none;
+  }
 }
 
 .item-footer__item:not(:last-child) {

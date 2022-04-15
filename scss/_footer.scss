@@ -94,6 +94,9 @@
 }
 
 .item-footer {
+    &.active .item-footer__list {
+        display: block;
+    }
     // .item-footer__title
     &__title {
         font-weight: 700;
@@ -102,9 +105,23 @@
         letter-spacing: 0.2px;
         color: #FFFFFF;
         margin-bottom: 25px;
+        cursor: pointer;
+        &:after {
+            content: "⮟";
+            color: #fff;
+            margin-left: 10px;
+            display: none;
+            @media (max-width: 767.98px) {
+                display: inline;
+            }
+        }
     }
     // .item-footer__list
-    &__list {}
+    &__list {
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+    }
     // .item-footer__item
     &__item {
         &:not(:last-child) {
